@@ -24,23 +24,65 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Unit Test Cases
 
-### `npm run eject`
+## Use of unit test case
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Isolation of Code Units:
+* Focuses on testing individual functions or methods in isolation.
+* Identifies and fixes bugs early, preventing them from affecting other parts of the codebase.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Early Detection of Defects:
+* Run as part of continuous integration to catch issues early in the development cycle.
+* Reduces the cost and effort required to fix problems by identifying them before integration.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Automated Testing:
+* Automated execution ensures consistent and frequent testing.
+* Helps prevent human errors and saves time by running tests automatically on code changes.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Regression Testing and Documentation:
+* Acts as regression testing, ensuring new changes do not break existing functionality.
+* Serves as a form of documentation, making it easier for developers to understand and maintain the codebase.
 
-## Learn More
+## Test Only One Thing at a Time
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+When writing unit tests, it is essential to follow the principle of testing only one thing at a time. This practice promotes clarity, isolates potential issues, and facilitates effective debugging.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Test-Driven Development (TDD)
+Test-Driven Development (TDD) is a software development methodology that emphasizes writing tests before writing the actual code. The TDD process typically follows a cycle known as the "Red-Green-Refactor" cycle.
+
+
+# Best Practices
+
+## Test Shouldn’t Duplicate Implementation Logic
+
+Unit tests should not duplicate the implementation logic present in the production code. If the same logic is reproduced in both the test and the code being tested, it can lead to maintenance challenges and inconsistencies. Tests should focus on verifying behavior rather than mirroring the implementation.
+
+## Should Be Readable
+
+Unit tests should be readable to ensure that they effectively communicate the intended behavior of the code being tested. Readability in tests is crucial for collaboration among team members, facilitating a clear understanding of the expected outcomes, inputs, and the logic being verified. Well-written tests act as documentation, providing insights into the purpose and functionality of the code. Clear and readable tests make it easier for developers to identify issues, comprehend the requirements, and maintain the test suite over time. Striving for readability involves using descriptive names for test methods, breaking down complex scenarios into smaller, focused tests, and avoiding overly clever or convoluted constructs. Prioritizing readability in unit tests contributes to a more transparent and collaborative development process, where team members can quickly grasp the intent of each test and ensure the reliability of the tested code.
+
+
+## Part of the Build Process (CI/CD)
+
+Integrate your tests into automated build and continuous integration processes. This ensures that tests are run consistently whenever changes are made to the codebase.
+
+## Improved Readability with Typings
+
+Typings enhance code readability by providing clear documentation of the expected types for variables and functions. This documentation can serve as a form of self-documentation and aids other developers who might be working on or reviewing the code. Code with typings tends to be more self-explanatory, making it easier to understand and maintain.
+
+## Cyclomatic Complexity
+
+### Impact on Maintainability: 
+
+High cyclomatic complexity can make code more challenging to maintain. Reducing complexity can enhance maintainability.
+
+### Testing Implications: 
+
+The cyclomatic complexity is related to the number of test cases needed for thorough test coverage. Higher complexity often requires more extensive testing.
+
+### Avoid Circular Dependency
+
+Circular dependencies occur when two or more modules depend on each other directly or indirectly, forming a loop in their dependency graph. Avoiding circular dependencies is crucial for maintaining a clear and manageable codebase. 
