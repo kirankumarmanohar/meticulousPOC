@@ -460,7 +460,7 @@ function UserForm() {
             <div className="relative w-auto my-6 mx-auto max-w-3xl w-1/2	">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                  <h3 className="text-3xl font-semibold">Modal Title</h3>
+                  <h3 className="text-3xl font-semibold">User details</h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
@@ -498,7 +498,7 @@ function UserForm() {
                     </div>
                     <div className="flex justify-between items-center">
                       <label className="font-semibold"> City </label>
-                      <p>{user.state.label}</p>
+                      <p>{user.city.label}</p>
                     </div>
                     <div className="flex justify-between items-center">
                       <label className="font-semibold"> ZipCode </label>
