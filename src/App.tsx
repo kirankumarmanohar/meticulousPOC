@@ -7,17 +7,19 @@ function App() {
   return (
     <div>
       <Menu />
-      <div className="justify-center items-center flex py-10">
-        <img src={logo} className="App-logo" alt="logo" />
+      <div>
+        <div className="justify-center items-center flex py-10">
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
         <div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
         </div>
       </div>
     </div>

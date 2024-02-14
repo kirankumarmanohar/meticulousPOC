@@ -41,6 +41,14 @@ function Menu() {
                 Table
               </Link>
             </li>
+            <li className="me-2">
+              <Link
+                to={`/form`}
+                className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg ${activeLink("/form")}`}
+              >
+                User Form
+              </Link>
+            </li>
           </ul>
         </div>
       </header>
