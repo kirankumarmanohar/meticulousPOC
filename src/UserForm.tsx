@@ -28,7 +28,6 @@ function UserForm() {
       firstName: "",
       lastName: "",
       middleName:"",
-      test:"",
       email: "",
       password: "",
       confirmPassword: "",
@@ -51,7 +50,6 @@ function UserForm() {
       firstName: Yup.string().required("First Name is required"),
       lastName: Yup.string().required("Last Name is required"),
       middleName: Yup.string().required("middleName is required"),
-      test: Yup.string().required("test is required"),
 
       email: Yup.string()
         .email("Invalid email address")
@@ -182,37 +180,7 @@ function UserForm() {
                   </Typography>
                 )}
               </div>
-              <div className="mb-1 flex flex-col gap-6">
-                <Typography
-                  variant="h6"
-                  color="blue-gray"
-                  className="-mb-3"
-                  placeholder={""}
-                >
-                  test
-                </Typography>
-                <Input
-                  placeholder="test"
-                  className="pl-2"
-                  crossOrigin={"false"}
-                  color="light-blue"
-                  size="md"
-                  name="test"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-                {formik.errors.test && (
-                  <Typography
-                    variant="paragraph"
-                    color="red"
-                    style={{ marginTop: "-10px" }}
-                    className="text-red-500 sm:text-sm"
-                    placeholder={""}
-                  >
-                    {formik.errors.test}
-                  </Typography>
-                )}
-              </div>
+              
               <div className="mb-1 flex flex-col gap-3 mt-3">
                 <Typography
                   variant="h6"
